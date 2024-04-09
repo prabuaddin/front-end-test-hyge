@@ -1,113 +1,109 @@
 import Image from "next/image";
+import Card from "~/components/card-product";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
+    <>
+      <div className="float-end pr-10 mt-10 w-[850px] hidden lg:block">
+        <img src="./hyge-assets/Vector 25.png" />
+      </div>
+      <div className="absolute pl-24 mt-24 hidden lg:block">
+        <img src="./hyge-assets/Vector 24.png" />
+      </div>
+      <div className="p-10 lg:pl-44 mt-10 pb-32">
+        <h1 className="text-5xl text-white mb-10">
+          Our <b className="text-sky-400">Portfolio</b>
+        </h1>
+        <p className="text-white text-[20px]">
+          As your digital partner, we collaborate with you to drive innovation,{" "}
+          <br />
+          stay ahead of the curve, and deliver real impact for your business.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <ul className="menu menu-horizontal gap-3 pt-9">
+          <li>
+            <button className="btn bg-blue-800 text-white border-none rounded-3xl w-[80px]">
+              All
+            </button>
+          </li>
+          <li>
+            <button className="btn bg-slate-700 border-slate-400 text-white rounded-3xl">
+              Web Development
+            </button>
+          </li>
+          <li>
+            <button className="btn bg-slate-700 border-slate-400 text-white rounded-3xl">
+              App Development
+            </button>
+          </li>
+          <li>
+            <button className="btn bg-slate-700 border-slate-400 text-white rounded-3xl">
+              UIDesign
+            </button>
+          </li>
+        </ul>
+      </div>
+      <Link href='/detail-page'>
+      <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mb-5 pb-16">
+        <Card />
+      </div>
+      </Link>
+      <div className="pl-44 pb-20">
+        <button className="btn bg-[#ECECEC4D] rounded-3xl border-none text-white">
+          Load More
+        </button>
+      </div>
+      <div className="flex flex-col p-10 lg:pl-40">
+        <h1 className="text-5xl text-white mb-10">
+          Our <b className="text-sky-400">Clients</b>
+        </h1>
+        <p className="text-white mb-10">
+          Here are just few of the clients we’ve had the privilege to serve:
+        </p>
+        <div className="grid grid-rows-2">
+          <ul className="">
+            <button>
+              <img src="/hyge-assets/Frame 324.png" alt=""/>
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 325.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 326.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 327.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 328.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 330.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 332.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 334.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 335.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 336.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 337.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 338.png" alt="" />
+            </button>
+            <button>
+              <img src="/hyge-assets/Frame 339.png" alt="" />
+            </button>
+          </ul>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
